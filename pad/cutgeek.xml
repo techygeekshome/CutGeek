@@ -41,8 +41,8 @@
     <Program_OS_Support>Win10,Win11,WinServer</Program_OS_Support>
     <Program_Language>English</Program_Language>
     <Program_Change_Info>Application icon redrawn to match the TechyGeeksHome house style. No functional changes.</Program_Change_Info>
-    <Program_Specific_Category>Multimedia & Design::Image Editing</Program_Specific_Category>
-    <Program_Category_Class>Graphic</Program_Category_Class>
+    <Program_Specific_Category>Graphic Apps::Editors</Program_Specific_Category>
+    <Program_Category_Class>Graphic Apps</Program_Category_Class>
     <Program_System_Requirements>Windows 10 version 1809 or later, 64-bit. Nothing else to install.</Program_System_Requirements>
     <File_Info>
       <File_Size_Bytes>34101394</File_Size_Bytes>

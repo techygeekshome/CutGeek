@@ -1,0 +1,27 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # The whole solution is plain net8.0 and builds on Linux, Avalonia included, so the
+      # checks run on a cheap runner. CutGeek.Core carries the parts worth proving - the
+      # EXIF-orientation read, the never-overwrite rule for output paths, and the pinned
+      # model hashes - and none of them touch Windows.
+      - name: Build
+        run: dotnet build CutGeek.sln -c Release
+
+      - name: Test
+        run: dotnet run --project tests/CutGeek.Tests -c Release --no-build

@@ -30,24 +30,24 @@
   </Company_Info>
   <Program_Info>
     <Program_Name>CutGeek</Program_Name>
-    <Program_Version>1.0.0</Program_Version>
+    <Program_Version>1.0.1</Program_Version>
     <Program_Release_Month>08</Program_Release_Month>
     <Program_Release_Day>30</Program_Release_Day>
     <Program_Release_Year>2026</Program_Release_Year>
     <Program_Cost_Dollars>0</Program_Cost_Dollars>
     <Program_Type>Freeware</Program_Type>
-    <Program_Release_Status>Major Update</Program_Release_Status>
+    <Program_Release_Status>Minor Update</Program_Release_Status>
     <Program_Install_Support>Install and Uninstall</Program_Install_Support>
     <Program_OS_Support>Win10,Win11,WinServer</Program_OS_Support>
     <Program_Language>English</Program_Language>
-    <Program_Change_Info>First public release.</Program_Change_Info>
+    <Program_Change_Info>Application icon redrawn to match the TechyGeeksHome house style. No functional changes.</Program_Change_Info>
     <Program_Specific_Category>Multimedia & Design::Image Editing</Program_Specific_Category>
     <Program_Category_Class>Graphic</Program_Category_Class>
     <Program_System_Requirements>Windows 10 version 1809 or later, 64-bit. Nothing else to install.</Program_System_Requirements>
     <File_Info>
-      <File_Size_Bytes>79000000</File_Size_Bytes>
-      <File_Size_K>77148</File_Size_K>
-      <File_Size_MB>75</File_Size_MB>
+      <File_Size_Bytes>34101394</File_Size_Bytes>
+      <File_Size_K>33302</File_Size_K>
+      <File_Size_MB>33</File_Size_MB>
     </File_Info>
     <Expire_Info>
       <Has_Expire_Info>N</Has_Expire_Info>

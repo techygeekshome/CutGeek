@@ -1,0 +1,77 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:CutGeek.ViewModels"
+             x:Class="CutGeek.Views.SettingsView"
+             x:DataType="vm:ShellViewModel">
+
+  <ScrollViewer>
+    <StackPanel Margin="26,20" Spacing="16" MaxWidth="820" HorizontalAlignment="Left">
+
+      <Border Classes="card">
+        <StackPanel>
+          <Border Classes="cardhead">
+            <TextBlock Text="What CutGeek will not do" FontWeight="SemiBold" />
+          </Border>
+
+          <Border Classes="row">
+            <StackPanel Spacing="3">
+              <TextBlock Text="It does not upload your photographs" FontWeight="SemiBold" />
+              <TextBlock Classes="sub"
+                         Text="The model runs in this process, on this machine, using your own processor. There is no account, no server and no upload. The only thing the app ever downloads is a model, from the Models screen, when you ask for one." />
+            </StackPanel>
+          </Border>
+
+          <Border Classes="row">
+            <StackPanel Spacing="3">
+              <TextBlock Text="It does not shrink the result or watermark it" FontWeight="SemiBold" />
+              <TextBlock Classes="sub"
+                         Text="The cutout comes out at exactly the size of the photograph that went in. That is the thing the web services charge for, and there is nothing to charge for: the model only ever looks at a small square, so the resolution of the output never cost anything to begin with." />
+            </StackPanel>
+          </Border>
+
+          <Border Classes="row">
+            <StackPanel Spacing="3">
+              <TextBlock Text="It does not change your originals" FontWeight="SemiBold" />
+              <TextBlock Classes="sub"
+                         Text="The photograph is only ever read. The cutout is written as a new file, and if one of that name is already there the next is numbered rather than replacing it." />
+            </StackPanel>
+          </Border>
+
+          <Border Classes="row">
+            <StackPanel Spacing="3">
+              <TextBlock Text="It does not count anything" FontWeight="SemiBold" />
+              <TextBlock Classes="sub"
+                         Text="No credits, no monthly allowance, no per-image limit, no trial. Cut out ten thousand photographs if you want to." />
+            </StackPanel>
+          </Border>
+
+          <Border Classes="row" BorderThickness="0">
+            <StackPanel Spacing="3">
+              <TextBlock Text="It is free, including at work" FontWeight="SemiBold" />
+              <TextBlock Classes="sub"
+                         Text="No paid tier, ever. GPL-3.0, source on GitHub." />
+            </StackPanel>
+          </Border>
+        </StackPanel>
+      </Border>
+
+      <Border Classes="card">
+        <StackPanel>
+          <Border Classes="cardhead">
+            <TextBlock Text="Where things are kept" FontWeight="SemiBold" />
+          </Border>
+
+          <Border Classes="row" BorderThickness="0">
+            <StackPanel Spacing="4">
+              <TextBlock Text="Models" FontWeight="SemiBold" />
+              <TextBlock Text="{Binding ModelFolder}" Classes="mono" TextWrapping="Wrap" />
+              <TextBlock Classes="sub" Margin="0,2,0,0"
+                         Text="Under your own profile rather than beside the program, so a reinstall does not mean downloading them again. There is a Remove button on the Models screen for anyone who wants the space back." />
+            </StackPanel>
+          </Border>
+        </StackPanel>
+      </Border>
+
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>

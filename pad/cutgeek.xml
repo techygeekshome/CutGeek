@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML_DIZ_INFO>
+  <MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>4.0</MASTER_PAD_VERSION>
+    <MASTER_PAD_EDITOR>TechyGeeksHome</MASTER_PAD_EDITOR>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products.</MASTER_PAD_INFO>
+  </MASTER_PAD_VERSION_INFO>
+  <Company_Info>
+    <Company_Name>TechyGeeksHome</Company_Name>
+    <Address_1></Address_1>
+    <Address_2></Address_2>
+    <City_Town></City_Town>
+    <State_Province></State_Province>
+    <Zip_Postal_Code></Zip_Postal_Code>
+    <Country>United Kingdom</Country>
+    <Company_WebSite_URL>https://techygeekshome.info</Company_WebSite_URL>
+    <Contact_Info>
+      <Author_First_Name>Andy</Author_First_Name>
+      <Author_Last_Name>Armstrong</Author_Last_Name>
+      <Author_Email>techygeeks@outlook.com</Author_Email>
+      <Contact_First_Name>Andy</Contact_First_Name>
+      <Contact_Last_Name>Armstrong</Contact_Last_Name>
+      <Contact_Email>techygeeks@outlook.com</Contact_Email>
+    </Contact_Info>
+    <Support_Info>
+      <Sales_Email>techygeeks@outlook.com</Sales_Email>
+      <Support_Email>techygeeks@outlook.com</Support_Email>
+      <General_Email>techygeeks@outlook.com</General_Email>
+    </Support_Info>
+  </Company_Info>
+  <Program_Info>
+    <Program_Name>CutGeek</Program_Name>
+    <Program_Version>1.0.0</Program_Version>
+    <Program_Release_Month>08</Program_Release_Month>
+    <Program_Release_Day>30</Program_Release_Day>
+    <Program_Release_Year>2026</Program_Release_Year>
+    <Program_Cost_Dollars>0</Program_Cost_Dollars>
+    <Program_Type>Freeware</Program_Type>
+    <Program_Release_Status>Major Update</Program_Release_Status>
+    <Program_Install_Support>Install and Uninstall</Program_Install_Support>
+    <Program_OS_Support>Win10,Win11,WinServer</Program_OS_Support>
+    <Program_Language>English</Program_Language>
+    <Program_Change_Info>First public release.</Program_Change_Info>
+    <Program_Specific_Category>Multimedia & Design::Image Editing</Program_Specific_Category>
+    <Program_Category_Class>Graphic</Program_Category_Class>
+    <Program_System_Requirements>Windows 10 version 1809 or later, 64-bit. Nothing else to install.</Program_System_Requirements>
+    <File_Info>
+      <File_Size_Bytes>79000000</File_Size_Bytes>
+      <File_Size_K>77148</File_Size_K>
+      <File_Size_MB>75</File_Size_MB>
+    </File_Info>
+    <Expire_Info>
+      <Has_Expire_Info>N</Has_Expire_Info>
+    </Expire_Info>
+  </Program_Info>
+  <Program_Descriptions>
+    <English>
+      <Keywords>background removal, cutout, transparent png, u2net, onnx, offline, free, windows</Keywords>
+      <Char_Desc_45>Free background removal at full resolution</Char_Desc_45>
+      <Char_Desc_80>Takes the background out of a photograph, at full size, on your own machine</Char_Desc_80>
+      <Char_Desc_250>CutGeek removes the background from a photograph on your own machine and writes the result at exactly the size of the original. Transparent PNG, a flat colour, or the original blurred. No credits, no watermark, nothing uploaded.</Char_Desc_250>
+      <Char_Desc_450>CutGeek removes the background from a photograph on your own machine, using the U2-Net and IS-Net models through the ONNX runtime. The result comes out at exactly the size of the photograph that went in - the thing web services charge for. Choose a transparent PNG, a flat colour from six presets, or the original background blurred behind the subject. No account, no credits, no watermark and no per-image limit.</Char_Desc_450>
+      <Char_Desc_2000>CutGeek takes the background out of a photograph, at full size, on your own machine.
+
+Drop a photograph in and CutGeek writes out a copy with the background removed. Choose a transparent PNG, a flat colour from six presets including passport blue and green screen, or the original background blurred behind the subject. JPEG, PNG, WebP, BMP, GIF and HEIC are all accepted.
+
+The result is exactly the size of the photograph that went in. That is the thing the web services charge for, and there is nothing to charge for: the model only ever looks at a small square and produces a mask at that size, which is scaled back up and applied to the original pixels.
+
+Four models are offered, from 4.6 MB to 179 MB, and none are bundled into the installer. Every model download is checked against a SHA-256 recorded inside the application and deleted if it does not match, so CutGeek runs the exact file it was tested with or nothing at all.
+
+EXIF orientation is read and applied, so phone photographs do not come out sideways. Originals are only ever read; if a cutout of that name already exists, the next one is numbered.
+
+No account, no server, no upload, no credits, no monthly allowance and no per-image limit. Free to use, including at work. GPL-3.0.</Char_Desc_2000>
+    </English>
+  </Program_Descriptions>
+  <Web_Info>
+    <Application_URLs>
+      <Application_Info_URL>https://techygeekshome.info/cutgeek/</Application_Info_URL>
+      <Application_Order_URL></Application_Order_URL>
+      <Application_Screenshot_URL>https://techygeekshome.info/wp-content/uploads/2026/08/cutgeek-cut-out.png</Application_Screenshot_URL>
+      <Application_Icon_URL>https://techygeekshome.info/wp-content/uploads/2026/08/cutgeek-32.png</Application_Icon_URL>
+      <Application_XML_File_URL>https://raw.githubusercontent.com/techygeekshome/CutGeek/main/pad/cutgeek.xml</Application_XML_File_URL>
+    </Application_URLs>
+    <Download_URLs>
+      <Primary_Download_URL>https://github.com/techygeekshome/CutGeek/releases/latest/download/CutGeekSetup.exe</Primary_Download_URL>
+      <Secondary_Download_URL>https://github.com/techygeekshome/CutGeek/releases/latest/download/CutGeek-portable.exe</Secondary_Download_URL>
+    </Download_URLs>
+  </Web_Info>
+</XML_DIZ_INFO>

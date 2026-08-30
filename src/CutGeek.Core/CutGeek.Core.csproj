@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>CutGeek.Core</RootNamespace>
+    <!-- The mask is applied pixel by pixel over images that can be 24 megapixels. A managed
+         indexer per channel is measurably slower there; pointers keep it to one pass. -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MIT. Runs the U^2-Net models on the CPU; no GPU package, because a GPU build would
+         pull in several hundred megabytes of CUDA that most people cannot use. -->
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.22.1" />
+
+    <!-- MIT. Pinned to the 2.88 line because Avalonia 11.2 uses it too, and two SkiaSharp
+         major versions in one process means two sets of native libraries. -->
+    <PackageReference Include="SkiaSharp" Version="2.88.9" />
+  </ItemGroup>
+</Project>

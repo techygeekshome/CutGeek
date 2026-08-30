@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>cutgeek</id>
+    <version>1.0.1</version>
+    <title>CutGeek</title>
+    <authors>TechyGeeksHome</authors>
+    <owners>techygeekshome</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">GPL-3.0-or-later</license>
+    <projectUrl>https://techygeekshome.info/cutgeek/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/techygeekshome/CutGeek@1e78b5619711ecce16eb275109134e6eb83fff88/icons/cutgeek-256.png</iconUrl>
+    <description>CutGeek removes the background from a photo on your own machine and gives it back at full
+resolution. The free web services downsize the result, watermark it, or hold the full-size version
+behind a subscription. This one does not.
+
+* Remove the background from a photo and save a transparent PNG
+* Keeps the original resolution - no downscaling of the result
+* Batch a folder of images in one run
+* Runs offline once installed, so the photos are never uploaded anywhere
+* No account, no adverts, no watermark, no credit system
+
+Open source under GPL-3.0. The .NET 8 runtime is bundled, so there is nothing to install first.</description>
+    <summary>Free offline background remover for Windows - full resolution, no uploads, no watermark</summary>
+    <releaseNotes>https://github.com/techygeekshome/CutGeek/releases/tag/v1.0.1</releaseNotes>
+    <copyright>Copyright (c) 2026 TechyGeeksHome</copyright>
+    <tags>cutgeek background-removal cutout image-editing transparent-png offline windows foss</tags>
+    <projectSourceUrl>https://github.com/techygeekshome/CutGeek</projectSourceUrl>
+    <packageSourceUrl>https://github.com/techygeekshome/CutGeek</packageSourceUrl>
+    <docsUrl>https://techygeekshome.info/cutgeek/</docsUrl>
+    <bugTrackerUrl>https://github.com/techygeekshome/CutGeek/issues</bugTrackerUrl>
+  </metadata>
+</package>

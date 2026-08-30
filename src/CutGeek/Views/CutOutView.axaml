@@ -1,0 +1,174 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:CutGeek.ViewModels"
+             x:Class="CutGeek.Views.CutOutView"
+             x:DataType="vm:ShellViewModel">
+
+  <Grid ColumnDefinitions="430,*" Margin="26,20">
+
+    <ScrollViewer Grid.Column="0" Margin="0,0,16,0">
+      <StackPanel Spacing="16">
+
+        <Border Classes="band" IsVisible="{Binding HasReadinessProblem}">
+          <StackPanel Orientation="Horizontal" Spacing="12">
+            <Border Width="4" CornerRadius="2" Background="{StaticResource Amber}" />
+            <TextBlock Text="{Binding Readiness}" Classes="sub" VerticalAlignment="Center" />
+          </StackPanel>
+        </Border>
+
+        <Border Classes="card">
+          <StackPanel>
+            <Border Classes="cardhead">
+              <TextBlock Text="What to make" FontWeight="SemiBold" />
+            </Border>
+
+            <StackPanel Margin="17,15" Spacing="14">
+              <StackPanel Spacing="5">
+                <TextBlock Text="Model" FontSize="12" Foreground="{StaticResource Txt2}" />
+                <ComboBox ItemsSource="{Binding Models}" SelectedItem="{Binding SelectedModel}"
+                          HorizontalAlignment="Stretch" />
+              </StackPanel>
+
+              <StackPanel Spacing="5">
+                <TextBlock Text="Behind the subject" FontSize="12" Foreground="{StaticResource Txt2}" />
+                <ComboBox ItemsSource="{Binding Backdrops}" SelectedItem="{Binding SelectedBackdrop}"
+                          HorizontalAlignment="Stretch" />
+              </StackPanel>
+
+              <StackPanel Spacing="5" IsVisible="{Binding WantsColour}">
+                <TextBlock Text="Colour" FontSize="12" Foreground="{StaticResource Txt2}" />
+                <ComboBox ItemsSource="{Binding Colours}" SelectedItem="{Binding SelectedColour}"
+                          HorizontalAlignment="Stretch" />
+              </StackPanel>
+
+              <CheckBox IsChecked="{Binding SaveAsJpeg}" IsEnabled="{Binding CanSaveAsJpeg}"
+                        Content="Save as JPEG instead of PNG" />
+            </StackPanel>
+
+            <Border Classes="row" BorderThickness="0,1,0,0">
+              <Grid ColumnDefinitions="*,Auto">
+                <StackPanel Grid.Column="0" Spacing="3">
+                  <TextBlock Text="Save into" FontSize="12" Foreground="{StaticResource Txt2}" />
+                  <TextBlock Text="{Binding OutputFolderText}" Classes="mono"
+                             TextTrimming="CharacterEllipsis" MaxWidth="260"
+                             HorizontalAlignment="Left" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8"
+                            VerticalAlignment="Center">
+                  <Button Classes="toolbtn" Content="Change…" Click="OnPickFolder" />
+                  <Button Classes="ghost" Content="Reset" Width="64" Click="OnResetFolder" />
+                </StackPanel>
+              </Grid>
+            </Border>
+          </StackPanel>
+        </Border>
+
+        <Border Classes="drop" IsVisible="{Binding !HasJobs}" MinHeight="180">
+          <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="9">
+            <TextBlock Text="Drop photographs here" FontSize="15" FontWeight="SemiBold"
+                       HorizontalAlignment="Center" />
+            <TextBlock Classes="sub" HorizontalAlignment="Center" TextAlignment="Center"
+                       Text="JPEG, PNG, WebP, BMP, GIF and HEIC. Cut out at their full size, on this machine." />
+            <Button Classes="toolbtn" Content="Choose images…" HorizontalAlignment="Center"
+                    Margin="0,6,0,0" Click="OnAddFiles" />
+          </StackPanel>
+        </Border>
+
+        <Border Classes="card" IsVisible="{Binding HasJobs}">
+          <StackPanel>
+            <Border Classes="cardhead">
+              <Grid ColumnDefinitions="*,Auto">
+                <TextBlock Grid.Column="0" Text="Images" FontWeight="SemiBold" />
+                <TextBlock Grid.Column="1" Classes="meta" VerticalAlignment="Center"
+                           Text="One at a time" />
+              </Grid>
+            </Border>
+
+            <ItemsControl ItemsSource="{Binding Jobs}">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="vm:JobViewModel">
+                  <Border Classes="row" Background="Transparent"
+                          PointerPressed="OnRowPressed">
+                    <Grid ColumnDefinitions="4,12,*,Auto">
+                      <Border Grid.Column="0" Width="4" CornerRadius="2"
+                              Background="{Binding StateBrush}" />
+
+                      <StackPanel Grid.Column="2" Spacing="3">
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                          <TextBlock Text="{Binding FileName}" FontWeight="SemiBold"
+                                     TextTrimming="CharacterEllipsis" MaxWidth="230" />
+                          <TextBlock Text="{Binding SizeText}" Classes="mono"
+                                     VerticalAlignment="Center" />
+                        </StackPanel>
+                        <TextBlock Text="{Binding Status}" Classes="sub" TextWrapping="NoWrap"
+                                   TextTrimming="CharacterEllipsis" />
+                      </StackPanel>
+
+                      <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="8"
+                                  VerticalAlignment="Center">
+                        <Button Classes="ghost" Content="Open" Width="58"
+                                Command="{Binding OpenResult}" IsVisible="{Binding HasOutput}" />
+                        <TextBlock Text="{Binding StateText}" Classes="meta"
+                                   VerticalAlignment="Center" MinWidth="50" TextAlignment="Right" />
+                      </StackPanel>
+                    </Grid>
+                  </Border>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </StackPanel>
+        </Border>
+
+      </StackPanel>
+    </ScrollViewer>
+
+    <Border Grid.Column="1" Classes="card">
+      <Grid RowDefinitions="Auto,*,Auto">
+        <Border Grid.Row="0" Classes="cardhead">
+          <Grid ColumnDefinitions="*,Auto">
+            <TextBlock Grid.Column="0" Text="Result" FontWeight="SemiBold" />
+            <TextBlock Grid.Column="1" Classes="meta" VerticalAlignment="Center"
+                       Text="Full size, no watermark, no credits" />
+          </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Margin="17" CornerRadius="7" ClipToBounds="True">
+          <Border.Background>
+            <ImageBrush Source="avares://CutGeek/Assets/checker.png"
+                        TileMode="Tile" Stretch="None"
+                        DestinationRect="0,0,32,32" />
+          </Border.Background>
+
+          <Panel>
+            <Image Source="{Binding Selected.Preview}" Stretch="Uniform" Margin="10"
+                   IsVisible="{Binding Selected.HasPreview, FallbackValue=False}" />
+
+            <TextBlock Classes="sub" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       TextAlignment="Center" MaxWidth="320"
+                       IsVisible="{Binding !Selected.HasPreview, FallbackValue=True}"
+                       Text="The cutout appears here. Nothing is sent anywhere to produce it - the model runs on this computer." />
+          </Panel>
+        </Border>
+
+        <Border Grid.Row="2" Classes="row" BorderThickness="0,1,0,0"
+                IsVisible="{Binding HasSelection}">
+          <Grid ColumnDefinitions="*,Auto">
+            <StackPanel Grid.Column="0" Spacing="3">
+              <TextBlock Text="{Binding Selected.FileName}" FontWeight="SemiBold"
+                         TextTrimming="CharacterEllipsis" />
+              <TextBlock Text="{Binding Selected.Status}" Classes="sub"
+                         TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8"
+                        VerticalAlignment="Center"
+                        IsVisible="{Binding Selected.HasOutput, FallbackValue=False}">
+              <Button Classes="toolbtn" Content="Open image" Command="{Binding Selected.OpenResult}" />
+              <Button Classes="ghost" Content="Open folder" Width="98"
+                      Command="{Binding Selected.OpenFolder}" />
+            </StackPanel>
+          </Grid>
+        </Border>
+      </Grid>
+    </Border>
+  </Grid>
+</UserControl>

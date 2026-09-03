@@ -19,6 +19,14 @@
 
 ---
 
+## 🎬 See it in action
+
+[![CutGeek demo video](https://img.youtube.com/vi/4sfjmieGSrc/maxresdefault.jpg)](https://www.youtube.com/watch?v=4sfjmieGSrc)
+
+A background removed at full size, in under a minute.
+
+---
+
 Drop a photograph in and CutGeek writes out a copy with the background removed - transparent, a
 flat colour, or the original blurred behind the subject. It runs the U²-Net and IS-Net models
 locally through the ONNX runtime. No account, no server, no upload, no credits.

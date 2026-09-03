@@ -44,6 +44,21 @@ Windows 10 or 11, 64-bit. Nothing else to install.
 - Queues as many images as you like and works through them one at a time
 - Reads EXIF orientation, so phone photos come out the right way up
 
+
+## Screenshots
+
+**Cut out** — the photograph goes in at full size, the cut-out comes back at exactly the same size.
+
+<img src="docs/screenshots/01-cut-out.png" alt="The Cut out screen showing a finished cut-out at full size" width="820">
+
+**Models** — four models, each checked against its hash, downloaded only when you ask.
+
+<img src="docs/screenshots/02-models.png" alt="The Models screen" width="820">
+
+**Settings** — a plain list of what CutGeek will not do.
+
+<img src="docs/screenshots/03-settings.png" alt="The Settings screen" width="820">
+
 ---
 
 ## What it will not do

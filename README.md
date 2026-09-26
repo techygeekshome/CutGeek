@@ -72,8 +72,8 @@ Windows 10 or 11, 64-bit. Nothing else to install.
 ## What it will not do
 
 - **It does not upload your photographs.** The model runs in this process, on your own
-  processor. The only thing the app ever downloads is a model, from the Models screen, when you
-  ask for one.
+  processor. It only goes online to download a model from the Models screen when you ask for
+  one, or to look for a new version when you click Check for updates.
 - **It does not shrink the result or watermark it.** That is the thing the web services charge
   for, and there is nothing to charge for - the model only ever looks at a small square, so the
   resolution of the output never cost anything to begin with.
